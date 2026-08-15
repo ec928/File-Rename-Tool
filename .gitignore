@@ -1,0 +1,12 @@
+# Runtime state — contains recently-used directories from the local machine.
+FileRenameWPF.json
+
+# Rename history — records original and new filenames plus their full source
+# paths. Personal data; must never be committed.
+FileRenameWPF_Log.csv
+*_Log.csv
+
+# General
+*.log
+Thumbs.db
+desktop.ini
