@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest a new rename rule or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the renaming job you're trying to do, rather than the feature you have in mind.
+      placeholder: I need to strip a trailing counter but only when it appears after the last underscore.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: A few filenames and what you'd want them to become.
+      value: |
+        Original            -> Desired
+        photo_final_01.jpg  -> photo_final.jpg
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything you've tried instead?
+      description: Existing rules you've combined, or other tools that handle this.
