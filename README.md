@@ -1,20 +1,16 @@
 # 📝 File Rename Tool
 
-A bulk file renaming utility for Windows with a live preview, full undo, and a CSV audit trail of
-every change.
+A bulk file renaming utility for Windows with a live preview, full undo, and a CSV audit trail of every change.
 
-Single-file: one `.bat` containing an embedded PowerShell/WPF application. No installer, no runtime to
-download, nothing written to the registry.
+Single-file: one `.bat` containing an embedded PowerShell/WPF application. No installer, no runtime to download, nothing written to the registry.
 
 ## ✨ Key Features
 
-**Preview before you commit** — every rule shows the resulting filenames before anything is written to
-disk, so a bad pattern costs nothing.
+**Preview before you commit** — every rule shows the resulting filenames before anything is written to disk, so a bad pattern costs nothing.
 
 **Undo** — reverses the last batch if a rename didn't do what you expected.
 
-**CSV audit log** — each run appends timestamp, original name, new name, and folder, so you always
-have a record of what changed.
+**CSV audit log** — each run appends timestamp, original name, new name, and folder, so you always have a record of what changed.
 
 **Rename rules**
 
@@ -26,8 +22,7 @@ have a record of what changed.
 | Replace With | Find-and-replace across filenames |
 | Date Modified | Applies the file's last-modified timestamp |
 
-**Directory filtering** — a file filter limits which files a rule applies to, and recently-used
-directories are remembered between sessions.
+**Directory filtering** — a file filter limits which files a rule applies to, and recently-used directories are remembered between sessions.
 
 ## 📦 Usage
 
@@ -35,11 +30,9 @@ directories are remembered between sessions.
 2. Run it. The batch file re-invokes itself through PowerShell and opens the window.
 3. Pick a directory, choose a rule, check the preview, then apply.
 
-Requires Windows PowerShell 5.1 (present on every Windows 10/11 install) and .NET Framework for WPF.
-Nothing else.
+Requires Windows PowerShell 5.1 (present on every Windows 10/11 install) and .NET Framework for WPF. Nothing else.
 
-**If Windows blocks it**: the file may arrive marked as downloaded from the internet. Right-click →
-Properties → **Unblock**, or run `Unblock-File .\FileRenameWPS.bat` in PowerShell.
+**If Windows blocks it**: the file may arrive marked as downloaded from the internet. Right-click → Properties → **Unblock**, or run `Unblock-File .\FileRenameWPS.bat` in PowerShell.
 
 ## 🔒 Privacy
 
@@ -48,10 +41,8 @@ The tool writes two files next to itself:
 - `FileRenameWPF.json` — your recently-used directories
 - `FileRenameWPF_Log.csv` — the rename history, including full source paths
 
-Both stay on your machine and both are gitignored, so they cannot be committed to this repository by
-accident. Delete them at any time; the tool recreates them as needed.
+Both stay on your machine and both are gitignored, so they cannot be committed to this repository by accident. Delete them at any time; the tool recreates them as needed.
 
 ## 💬 Feedback
 
-Bugs and feature requests are welcome in the
-[Issues](https://github.com/ec928/File-Rename-Tool/issues) tab.
+Bugs and feature requests are welcome in the [Issues](https://github.com/ec928/File-Rename-Tool/issues) tab.
